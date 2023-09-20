@@ -1,3 +1,11 @@
+import { Link, routes } from '@redwoodjs/router'
+import CommentsCell from 'src/components/CommentsCell'
+import CommentForm from 'src/components/CommentForm'
+
+const truncate = (text, length) => {
+  return text.substring(0, length) + '...'
+}
+
 const Article = ({ article, summary = false }) => {
   return (
     <article>
@@ -20,3 +28,5 @@ const Article = ({ article, summary = false }) => {
     </article>
   )
 }
+
+export default Article
